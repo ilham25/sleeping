@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$lu: #4081ff;
+$eve: #e18aa4;
+$laby: #e12a5a;
+$raven: #2d2d2d;
+
+@mixin wpContainer($img) {
+  background-image: url($img);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.wp {
+  width: 100vw;
+  height: 100vh;
+  @include wpContainer("../img/bg.jpg");
+}
+
+#fullpage {
+  position: absolute;
+  background-color: transparent;
+}
+
+.section {
+  .content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .player-img {
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      .chara {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .description {
+      padding-top: 50px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+      .bg {
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        // left: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+      }
+      .name {
+        flex-basis: 20%;
+        height: 100%;
+        // width: 100%;
+        h1 {
+          font-size: 4.5em;
+          font-weight: 600;
+        }
+        p {
+          text-align: end;
+          font-weight: 500;
+        }
+      }
+      .favskill {
+        position: relative;
+        margin-top: 20%;
+        flex-basis: 60%;
+        height: 100%;
+        width: 100%;
+        // background-color: #4081ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .card {
+          width: 500px;
+          height: 200px;
+          background-color: white;
+          box-shadow: 1px 1px 30px rgba($color: #000000, $alpha: 0.3);
+          border-radius: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: $raven;
+            margin-bottom: 15px;
+          }
+          .skill-container {
+            display: flex;
+            width: 320px;
+            height: 80px;
+            background-color: yellow;
+            align-items: center;
+            img {
+              height: 80px;
+              width: 80px;
+            }
+          }
+        }
+      }
+      .footer {
+        position: relative;
+        flex-basis: 20%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 15px;
+        .badge-container {
+          flex-basis: 40%;
+          height: 64px;
+          img {
+            height: 64px;
+            width: 64px;
+          }
+        }
+        .quote-container {
+          flex-basis: 40%;
+          p {
+            text-align: end;
+            color: $raven;
+            font-size: 1.2em;
+            font-style: italic;
+          }
+        }
+        // background-color: white;
+      }
+      //   display: flex;
+    }
+  }
+}
+
+.p1 {
+  .name {
+    position: absolute;
+    left: 41%;
+    h1 {
+      color: $lu;
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+.p2 {
+  .name {
+    position: absolute;
+    left: 38%;
+    h1 {
+      color: $eve;
+      span {
+        color: white;
+      }
+    }
+  }
+}
+.p3 {
+  .name {
+    position: absolute;
+    left: 40%;
+    h1 {
+      color: $laby;
+      span {
+        color: white;
+      }
+    }
+  }
+}
+.p4 {
+  .name {
+    position: absolute;
+    left: 40.5%;
+    h1 {
+      color: $raven;
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+}
