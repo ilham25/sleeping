@@ -34,9 +34,10 @@ $raven: #2d2d2d;
   .content {
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+
     .player-img {
+      flex: 1;
       height: 100%;
       width: 100%;
       background-color: rgba($color: #000000, $alpha: 0.8);
@@ -47,6 +48,7 @@ $raven: #2d2d2d;
       }
     }
     .description {
+      flex: 1;
       padding-top: 50px;
       background-color: white;
       display: flex;
@@ -81,7 +83,6 @@ $raven: #2d2d2d;
         flex-basis: 60%;
         height: 100%;
         width: 100%;
-        // background-color: #4081ff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -105,7 +106,6 @@ $raven: #2d2d2d;
             display: flex;
             width: 320px;
             height: 80px;
-            background-color: yellow;
             align-items: center;
             img {
               height: 80px;
@@ -140,9 +140,7 @@ $raven: #2d2d2d;
             font-style: italic;
           }
         }
-        // background-color: white;
       }
-      //   display: flex;
     }
   }
 }
@@ -200,4 +198,91 @@ $raven: #2d2d2d;
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    .content {
+      display: flex;
+      flex-direction: column;
+      .player-img {
+        flex-basis: 1;
+      }
+      .description {
+        padding-top: 20px;
+        flex-basis: 1;
+        .bg {
+          display: none;
+        }
+        .name {
+          flex-basis: 20%;
+          position: static;
+          h1 {
+            font-size: 2.5em;
+          }
+        }
+        .favskill {
+          flex-basis: 60%;
+          position: static;
+          margin-top: 0;
+          .card {
+            width: 100%;
+            border-radius: 0;
+            box-shadow: 0 0 0 (rgba($color: #000000, $alpha: 0));
+          }
+        }
+        .footer {
+          flex-basis: 20%;
+          position: static;
+          margin-bottom: 10px;
+          .badge-container {
+            flex-basis: 50%;
+          }
+          .quote-container {
+            flex-basis: 50%;
+          }
+        }
+      }
+    }
+  }
+  .p1 {
+    .name {
+      h1 {
+        color: $lu;
+        span {
+          color: $lu;
+        }
+      }
+    }
+  }
+  .p2 {
+    .name {
+      h1 {
+        color: $eve;
+        span {
+          color: $eve;
+        }
+      }
+    }
+  }
+  .p3 {
+    .name {
+      h1 {
+        color: $laby;
+        span {
+          color: $laby;
+        }
+      }
+    }
+  }
+  .p4 {
+    .name {
+      h1 {
+        color: $raven;
+        span {
+          color: $raven;
+        }
+      }
+    }
+  }
 }
